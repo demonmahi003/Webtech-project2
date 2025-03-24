@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="TourismX - Your one-stop portal for booking travel, accommodation, and dining">
+  <title>TourismX - Tourism Booking Portal</title>
+  <link rel="stylesheet" href="p1.css">
+  <!-- Add Google Fonts - Poppins -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <nav class="main-nav">
+      <div class="logo">
+        <h1><a href="/">Tourism<span class="accent-text">X</span></a></h1>
+      </div>
+      <ul class="nav-links">
+        <li><a href="#transport" aria-label="Book Transportation">Transport</a></li>
+        <li><a href="#stay" aria-label="Book Accommodation">Stay</a></li>
+        <li><a href="#food" aria-label="Book Dining">Food</a></li>
+        <li><a href="#login" class="cta-button" aria-label="Login or Register">Login</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="login" class="form-section">
+      <h2>Welcome to TourismX</h2>
+      <p class="section-description">Join us to start planning your perfect trip</p>
+      <form id="user-form" action="#" method="POST" class="auth-form">
+        <div class="form-group">
+          <label for="name">Full Name</label>
+          <input type="text" id="name" name="name" required 
+                 placeholder="Enter your full name" autocomplete="name">
+        </div>
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" required 
+                 placeholder="your@email.com" autocomplete="email">
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" required 
+                 placeholder="Enter your password" minlength="8" 
+                 autocomplete="new-password">
+          <small class="password-hint">Minimum 8 characters</small>
+        </div>
+
+        <div class="buttcont">
+          <button type="submit" id="register-btn" class="primary-btn">Create Account</button>
+          <button type="button" id="login-btn" class="secondary-btn">Sign In</button>
+        </div>
+      </form>
+    </section>
+
+    <section id="transport" class="form-section">
+      <h2>Book Your Transportation</h2>
+      <p class="section-description">Find the perfect way to reach your destination</p>
+      <form action="#" method="POST" class="booking-form">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="from">Departure City</label>
+            <input type="text" id="from" name="from" required 
+                   placeholder="City of departure">
+          </div>
+          <div class="form-group">
+            <label for="to">Destination City</label>
+            <input type="text" id="to" name="to" required 
+                   placeholder="City of arrival">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="transport-type">Mode of Transport</label>
+            <select id="transport-type" name="transport-type" required>
+              <option value="">Select transport type</option>
+              <option value="flight">Flight</option>
+              <option value="train">Train</option>
+              <option value="bus">Bus</option>
+              <option value="car">Car Rental</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="date">Travel Date</label>
+            <input type="date" id="date" name="date" required>
+          </div>
+        </div>
+        <div class="buttcont">
+          <button type="submit" class="primary-btn">Search Transportation</button>
+        </div>
+      </form>
+    </section>
+
+    <section id="stay" class="form-section">
+      <h2>Find Your Perfect Stay</h2>
+      <p class="section-description">Book comfortable accommodation for your trip</p>
+      <form action="#" method="POST" class="booking-form">
+        <div class="form-group">
+          <label for="hotel-name">Destination or Hotel Name</label>
+          <input type="text" id="hotel-name" name="hotel-name" required 
+                 placeholder="Where would you like to stay?">
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="check-in">Check-in Date</label>
+            <input type="date" id="check-in" name="check-in" required>
+          </div>
+          <div class="form-group">
+            <label for="check-out">Check-out Date</label>
+            <input type="date" id="check-out" name="check-out" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="guests">Number of Guests</label>
+          <input type="number" id="guests" name="guests" min="1" max="10" required 
+                 placeholder="Number of guests">
+        </div>
+        <div class="buttcont">
+          <button type="submit" class="primary-btn">Search Accommodations</button>
+        </div>
+      </form>
+    </section>
+
+    <section id="food" class="form-section">
+      <h2>Dining Reservations</h2>
+      <p class="section-description">Discover and book amazing dining experiences</p>
+      <form action="#" method="POST" class="booking-form">
+        <div class="form-group">
+          <label for="restaurant">Restaurant Name or Cuisine</label>
+          <input type="text" id="restaurant" name="restaurant" required 
+                 placeholder="Search for restaurants or cuisine">
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="reservation-date">Reservation Date</label>
+            <input type="date" id="reservation-date" name="reservation-date" required>
+          </div>
+          <div class="form-group">
+            <label for="meal-type">Meal Type</label>
+            <select id="meal-type" name="meal-type" required>
+              <option value="">Select meal type</option>
+              <option value="breakfast">Breakfast</option>
+              <option value="lunch">Lunch</option>
+              <option value="dinner">Dinner</option>
+            </select>
+          </div>
+        </div>
+        <div class="buttcont">
+          <button type="submit" class="primary-btn">Find Restaurants</button>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-brand">
+        <h3>TourismX</h3>
+        <p>Making travel planning simple and enjoyable</p>
+      </div>
+      <div class="footer-links">
+        <p>&copy; 2025 TourismX - All Rights Reserved</p>
+        <nav>
+          <a href="/privacy">Privacy Policy</a>
+          <a href="/terms">Terms of Service</a>
+          <a href="/contact">Contact Us</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <div id="loginModal" class="modal" aria-labelledby="loginTitle" role="dialog" aria-modal="true">
+    <div class="modal-content">
+      <span class="close" aria-label="Close login form">&times;</span>
+      <h2 id="loginTitle">Sign In</h2>
+      <form id="loginForm" class="auth-form">
+        <div class="form-group">
+          <label for="loginEmail">Email</label>
+          <input type="email" id="loginEmail" name="email" required 
+                 placeholder="Enter your email" autocomplete="email">
+        </div>
+        <div class="form-group">
+          <label for="loginPassword">Password</label>
+          <input type="password" id="loginPassword" name="password" required 
+                 placeholder="Enter your password" autocomplete="current-password">
+        </div>
+        <div class="buttcont">
+          <button type="submit" class="primary-btn">Sign In</button>
+        </div>
+        <p class="form-footer">Don't have an account? <a href="#login">Register</a></p>
+      </form>
+    </div>
+  </div>
+
+  <script src="scriptt.js"></script>
+</body>
+</html>
